@@ -1,0 +1,8 @@
+/.idea/
+clown.iml
+admin/admin.iml
+common/common.iml
+component/component.iml
+devtools/devtools.iml
+modules/modules.iml
+admin-server/admin-server.iml

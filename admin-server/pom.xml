@@ -3,29 +3,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <name>clown</name>
-    <description>Demo project for Spring Boot</description>
+    <artifactId>admin-server</artifactId>
+    <packaging>jar</packaging>
+    <name>后台监控系统</name>
 
-    <groupId>cn.org</groupId>
-    <artifactId>clown</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>admin-server</module>
-        <module>admin</module>
-        <module>common</module>
-        <module>modules</module>
-        <module>component</module>
-        <module>devtools</module>
-    </modules>
-
-    <!-- Spring boot 父引用-->
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.6.RELEASE</version>
-        <relativePath/>
+        <groupId>cn.org</groupId>
+        <artifactId>clown</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
 
     <properties>
@@ -33,18 +18,27 @@
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-server</artifactId>
+            <version>2.2.1</version>
+        </dependency>
+        <!--登录认证-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <!--掉线发送邮件通知-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-
     </dependencies>
 
     <build>
