@@ -30,6 +30,14 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <!-- Swagger API文档 -->
+        <Swagger.version>2.7.0</Swagger.version>
+        <!-- Jasypt加密 -->
+        <Jasypt.version>2.1.1</Jasypt.version>
+        <!--admin 监控 客户端-->
+        <Admin.version>2.2.1</Admin.version>
+        <!--httpclient工具-->
+        <Httpclient.version>4.5.3</Httpclient.version>
     </properties>
 
     <dependencies>
@@ -37,34 +45,54 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
+        <!--lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!--httpclient工具-->
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
-            <version>4.5.3</version>
+            <version>${Httpclient.version}</version>
         </dependency>
-
+        <!-- Swagger API文档 -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${Swagger.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${Swagger.version}</version>
+        </dependency>
+        <!-- Jasypt加密 -->
+        <dependency>
+            <groupId>com.github.ulisesbocchio</groupId>
+            <artifactId>jasypt-spring-boot-starter</artifactId>
+            <version>${Jasypt.version}</version>
+        </dependency>
         <!--admin 监控 客户端-->
         <dependency>
             <groupId>de.codecentric</groupId>
             <artifactId>spring-boot-admin-starter-client</artifactId>
-            <version>2.2.1</version>
+            <version>${Admin.version}</version>
         </dependency>
-
         <!--掉线发送邮件通知-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-mail</artifactId>
         </dependency>
-
+        <!--test 测试-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-
     </dependencies>
+
 
     <build>
         <plugins>
