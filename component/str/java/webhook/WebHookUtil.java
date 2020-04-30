@@ -15,7 +15,8 @@ public class WebHookUtil {
     /**
      * WebHook地址xxx
      */
-    public static String WEBHOOK_TOKEN = "https://oapi.dingtalk.com/robot/send?access_token=e87bd8ed44750aba0ed3ba7884202a23301a1ef0bef9e2174eef1caa9b47503d";
+    public static String WEBHOOK_TOKEN =
+            "https://oapi.dingtalk.com/robot/send?access_token=1c29a09f72ee1a08bc6272b60f5c749f1ff3b951331d682b85e826312c00b8d6";
 
 
     /**
@@ -31,7 +32,7 @@ public class WebHookUtil {
         // content 内容
         // atMobiles 手机号
         // @所有人 isAtAll 时为true，上面的atMobiles就失效了
-        String textMsg = "{\"msgtype\":\"text\",\"text\":{\"content\":\"我自己换的\"},\"at\":{\"atMobiles\":[\"xxx\"],\"isAtAll\":false}}";
+        String textMsg = "{\"msgtype\":\"text\",\"text\":{\"content\":\"@曹源 今天是不是该我取饭了\"},\"at\":{\"atMobiles\":[\"xxx\"],\"isAtAll\":false}}";
         StringEntity se = new StringEntity(textMsg, "utf-8");
         httppost.setEntity(se);
         HttpResponse response = httpclient.execute(httppost);
