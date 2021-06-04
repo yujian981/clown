@@ -37,7 +37,7 @@
         <!--admin 监控 客户端-->
         <Admin.version>2.2.1</Admin.version>
         <!--httpclient工具-->
-        <Httpclient.version>4.5.3</Httpclient.version>
+        <Httpclient.version>4.5.13</Httpclient.version>
     </properties>
 
     <dependencies>
